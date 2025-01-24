@@ -1,0 +1,233 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background color */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Side panel styling */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.panel-button {
+    display: block;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #555;
+}
+
+.panel-button:hover {
+    background-color: #555;
+}
+
+.content {
+    display: none; /* Hide all sections initially */
+    padding: 20px;
+    padding-left: 60px;
+}
+
+/* Home Info Box */
+.home-info-box {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px; /* Default box width for Home */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Condition/Rate Lookup Info Box */
+.condition-rate-info-box {
+    background-color: #444;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px; /* Wider box for Condition/Rate Lookup */
+    height:50%; /* Taller box for Condition/Rate Lookup */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    
+    flex-direction: column;
+}
+
+/* Title styling inside the info box */
+.info-box h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Condition/Rate Lookup Section */
+#condition-rate-lookup {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take up the full viewport height */
+    width: 100%;   /* Ensure it also takes up the full width */
+    margin: 0;
+}
+
+
+
+
+#conditionsForm {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(2, 200px); /* Two equal-width columns */
+    column-gap: 5px;
+    gap: 10px; /* Space between items */
+    padding: 20px;
+    background-color: #222; /* Dark background for the form */
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+
+#conditionsForm input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    accent-color: #1e90ff; /* Custom color for the checkbox */
+}
+
+#conditionsForm label {
+    color: white;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    align-items: left;
+}
+
+
+#submitBtn {
+    background-color: #1e90ff; /* Blue background for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #007acc; /* Darker blue when hovered */
+}
+
+#output {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+#output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#output th, #output td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+#output th {
+    background-color: #1e90ff;
+}
+
+#output td {
+    background-color: #444;
+}
+
+/* Style for the container */
+#conditionsContainer {
+    
+    max-height: 90%; /* Set a max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #000000; /* Optional border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #000000; /* Light background color */
+}
+
+/* Style for each checkbox and label group */
+.form-item {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    width: 200px; /* Two columns, accounting for gap */
+    height: 20px;
+    box-sizing: border-box; /* Includes padding/borders in width */
+  }
+
+/* Optional styling for labels */
+.form-item label {
+    margin-left: 8px; /* Add space between the checkbox and the label */
+    font-size: 17px; /* Adjust font size for readability */
+}
+
+
+
+
+.logo-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Each row has one logo */
+    grid-auto-flow: row; /* Ensures the layout flows in rows */
+    gap: 20px; /* Space between rows */
+    justify-items: left; /* Center-align the logos horizontally */
+  }
+  
+  .company-logo {
+    width: 100%; /* Ensures the image stretches to fill the container width */
+    height: 120px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crops the image to fill the space without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adds hover effect */
+    justify-content: center;
+  }
+  
+
+
+#infoBoxConditionRate h2 {
+    color: white; /* Sets the text color to white */
+  }
+  

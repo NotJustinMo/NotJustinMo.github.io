@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        &#9776; <!-- Hamburger symbol -->
+    </div>
+
+    <!-- Side Panel -->
+    <div class="side-panel" id="sidePanel">
+        <button class="panel-button" data-target="home">Home</button>
+        <button class="panel-button" data-target="condition-rate-lookup">Condition/Rate Lookup</button>
+        <button class="panel-button" data-target="build-charts">Build Charts</button>
+        <button class="panel-button" data-target="presentation">Presentation</button>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content" id="home">
+        <div class="home-info-box" id="infoBox">
+            <h2>Contact Us</h2>
+            <p>Email: Justinmolnar56@gmail.com</p><br>
+            <h2>Chatbot</h2><p><br>The chatbot has been trained on multiple databases to assist you with lightning speed. topics of interest include questions about prescriptions, carrier information, assistance with presentation and selling, state guidelines, and general questions. The chatbot isn't completly trained and will continue to gain new knowledge. In the next few updates personalized coahcing will be added to the chatbot in which it will store memory of questions and coach you personally on your sales technique</p>
+            <br><h2>Condition lookup/rate finder</h2>
+            <br><p>The condition and rate lookup tool is a quick way to find out which carriers your client qualifies for. essentially functioning as a In and Up to be used in conjunction with the chatbot helping to confirm conditions by looking up prescriptions. The rate portion of it will help you determine which of the carriers approved will give the client the best rate</p>
+            <br><h2>Build Charts</h2>
+            <br><p>A simple list of the carriers and their build charts for quick lookup</p>
+            <br><h2>Presentation</h2>
+            <br><p>a work in progress designed to help close the deal by giving a sleek interactable presentation of the rates and carriers avaliable for the client</p>
+        </div>
+        <div class = "logo-container">
+            <a href="https://agent.royalneighbors.org/login" target="_blank">
+                <img src="images\Royal Neighbors logo.png" alt="Royal neighbors logo" class="company-logo"> 
+            </a>
+            <a href="https://producer.mutualofomaha.com/enterprise/myportal" target="_blank">
+                <img src="images\MOO favicon.png" alt="Mutual of Omaha logo" class="company-logo"> 
+            </a>
+            <a href="https://account.americoagent.com/Identity/Account/Login/?returnUrl=https%3a%2f%2fportal.americoagent.com%2f" target="_blank">
+                <img src="images\cropped-Americologo_red_289-2.png" alt="Americo logo" class="company-logo"> 
+            </a>
+            <a href="https://connext.corebridgefinancial.com/life/connext-security/public/login" target="_blank">
+                <img src="images\Corebridge_financial_logo-600-1.webp" alt="AIG Logo" class="company-logo"> 
+            </a>
+            <a href="https://secure.transamerica.com/login/sign-in/login.html" target="_blank">
+                <img src="images\transamerica.png" alt="Transamerica Logo" class="company-logo"> 
+            </a>
+            <a href="https://agent.lbig.com/" target="_blank">
+                <img src="images\LBIG_favicon.png" alt="Transamerica Logo" class="company-logo"> 
+            </a>
+        </div>
+    </div>
+
+    <div class="content" id="condition-rate-lookup">
+        <div class="condition-rate-info-box" id="infoBoxConditionRate">
+            <h2>Select Client's Conditions</h2>
+            <div id = "conditionsContainer">
+                <form id="conditionsForm"></form>
+            </div>
+        </div>
+        <button class="submit-btn" id="submitBtn">Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <div class="content" id="build-charts">
+        <div class="build-chart-container">
+            <!-- Dropdown for selecting the company -->
+            <select id="companySelect" onchange="updateBuildChart()">
+              <option value="">Select a Company</option>
+              <option value="Americo">Americo</option>
+              <option value="Omaha">Omaha</option>
+              <option value="LBIG">LBIG</option>
+              <!-- Add more companies as needed -->
+            </select>
+        
+            <!-- Displaying Company Logo -->
+            <div id="companyLogo" class="company-logo">
+              <img id="logoImage" src="" alt="Company Logo">
+            </div>
+        
+            <!-- Displaying Build Chart -->
+            <div id="buildChart" class="build-chart">
+              <img id="chartImage" src="" alt="Build Chart">
+            </div>
+          </div>
+    </div>
+
+    <div class="content" id="presentation">
+        <h1>Presentation</h1>
+        <p>This is where the presentation content will go.</p>
+    </div>
+
+     <!--
+Paste this script at the bottom of your HTML before the </body> tag.
+See more style and config options on our docs
+https://github.com/Mintplex-Labs/anything-llm/tree/master/embed/README.md
+-->
+<script
+data-embed-id="606f6cae-6cef-4c44-a7c0-1512d3dcd02e"
+data-base-api-url="https://960685c618208d1cf8bc8a5d1fd7075e.serveo.net/api/embed"
+src="https://960685c618208d1cf8bc8a5d1fd7075e.serveo.net/embed/anythingllm-chat-widget.min.js">
+</script>
+<!-- AnythingLLM (https://anythingllm.com) -->
+
+    <script src="script.js"></script>
+</body>
+</html>
