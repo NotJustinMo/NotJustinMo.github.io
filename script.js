@@ -245,3 +245,9 @@ const data = {
     }
   }
   
+  window.addEventListener("DOMContentLoaded", () => {
+    const homePage = document.getElementById("home");
+    if (homePage) {
+        homePage.style.display = "block"; // Show the home page container
+    }
+});
