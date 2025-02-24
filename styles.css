@@ -231,3 +231,29 @@ body {
     color: white; /* Sets the text color to white */
   }
   
+
+  /* Container for the PNG Background */
+.pdf-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Match your PNG's resolution */
+    margin: 0 auto;
+    aspect-ratio: 8.5 / 11; /* Match your PNG's aspect ratio (e.g., A4) */
+}
+
+/* PNG Background */
+.pdf-background {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Text Overlays */
+.overlay {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    color: black; /* Text color */
+    pointer-events: none; /* Prevent interaction */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: clamp(12px, 1.2vw, 18px); /* Min 12px, Scales up to 1.2vw, Max 18px */
+}
